@@ -1,0 +1,227 @@
+<app-login-header
+  ><div class="login-now">
+    已有账号，<a (click)="doLogin()">立即登录</a>
+  </div></app-login-header
+>
+<div class="container">
+  <div class="reg-header">
+    <div class="title">用户注册</div>
+  </div>
+  <div class="reg-body">
+    <div class="form" [formGroup]="myForm">
+      <ul>
+        <li *ngIf="!!msg" class="reg-item">
+          <div class="alert alert-danger">
+            {{ msg }}
+          </div>
+        </li>
+        <li class="reg-item">
+          <span class="label"><span class="red">*</span>邀请码</span>
+          <div class="item-content">
+            <div class="input">
+              <input
+                type="text"
+                formControlName="code"
+                id="code"
+                (input)="checkCode($event.target.value)"
+              />
+            </div>
+          </div>
+        </li>
+        <li class="reg-item">
+          <span class="label">企业名称</span>
+          <div class="item-content">
+            <div class="input">
+              <input type="text" readOnly formControlName="qiye" id="qiye" />
+            </div>
+          </div>
+        </li>
+        <!-- <li class="reg-item">
+          <span class="label"><span class="red">*</span>姓</span>
+          <div class="item-content">
+            <div class="input">
+              <input type="text" formControlName="lastName" id="lastName" />
+            </div>
+          </div>
+        </li> -->
+        <li class="reg-item">
+          <span class="label"><span class="red">*</span>姓名</span>
+          <div class="item-content">
+            <div class="input">
+              <input type="text" formControlName="firstName" id="firstName" />
+            </div>
+          </div>
+        </li>
+        <li class="reg-item">
+          <span class="label"><span class="red"></span>Email</span>
+          <div class="item-content">
+            <div class="input">
+              <input
+                type="text"
+                formControlName="email"
+                id="email"
+                (change)="checkEmail($event.target.value)"
+              />
+            </div>
+            <div class="error" *ngIf="error.email !== false">
+              {{ error.email }}
+            </div>
+          </div>
+        </li>
+        <li class="reg-item">
+          <span class="label"><span class="red">*</span>登录账号</span>
+          <div class="item-content">
+            <div class="input">
+              <input
+                type="text"
+                formControlName="username"
+                id="username"
+                (change)="checkUserName($event.target.value)"
+              />
+            </div>
+            <div class="error" *ngIf="error.username !== false">
+              {{ error.username }}
+            </div>
+            <div
+              *ngIf="
+                myForm.get('username').dirty && myForm.get('username').errors
+              "
+              class="error"
+            >
+              登录名规则：由数字、字母、下划线组成
+            </div>
+          </div>
+        </li>
+        <ng-container formGroupName="attributes">
+          <li class="reg-item">
+            <span class="label"><span class="red">*</span>登录密码</span>
+            <div class="item-content" formArrayName="password">
+              <div class="input">
+                <input type="password" formControlName="0" id="password" />
+              </div>
+              <div
+                class="error"
+                *ngIf="
+                  password.controls[0].dirty && password.controls[0].errors
+                "
+              >
+                密码规则：长度6-16位，必须包含数字、大写字母、小写
+                字母、特殊字符
+              </div>
+            </div>
+          </li>
+          <li class="reg-item">
+            <span class="label"><span class="red">*</span>确认密码</span>
+            <div class="item-content">
+              <div class="input">
+                <input
+                  type="password"
+                  formControlName="reppassword"
+                  id="reppassword"
+                />
+              </div>
+              <ng-container *ngIf="reppassword.dirty && reppassword.errors">
+                <div class="error" *ngIf="reppassword.hasError('required')">
+                  请填写确认密码
+                </div>
+                <div class="error" *ngIf="reppassword.hasError('equal')">
+                  密码规则：必须与登录密码一致
+                </div>
+              </ng-container>
+            </div>
+          </li>
+        </ng-container>
+        <li class="reg-item">
+          <span class="label"><span class="red">*</span>验证码</span>
+          <div class="item-content captcha">
+            <div class="input">
+              <input
+                type="text"
+                maxlength="6"
+                formControlName="vertify"
+                id="vertify"
+              />
+            </div>
+            <input
+              type="button"
+              #btnVertify
+              class="captcha-sub sub"
+              value="获取验证码"
+              (click)="doSendVertify()"
+              [disabled]="!getCodeStatus"
+            />
+            <ng-container *ngIf="vertify.dirty && vertify.errors">
+              <div class="error" *ngIf="vertify.hasError('required')">
+                请输入验证码
+              </div>
+              <div class="error" *ngIf="vertify.hasError('errors')">
+                验证码输入错误
+              </div>
+            </ng-container>
+          </div>
+        </li>
+        <li class="reg-item">
+          <span class="protocol"
+            ><input
+              type="checkbox"
+              formControlName="xieyi"
+              name="xieyi"
+              id="xieyi"
+            />
+            <span (click)="xieyi = !xieyi"
+              >我已阅读并同意<a>《用户注册与服务协议》</a></span
+            ></span
+          >
+        </li>
+        <li class="reg-item">
+          <input
+            type="button"
+            class="sub"
+            value="注册"
+            (click)="formSubmitSubject$.next()"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade in"
+  id="myModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+  style="display: block;"
+  *ngIf="xieyi"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-hidden="true"
+          (click)="xieyi = !xieyi"
+        >
+          ×
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          注册协议
+        </h4>
+      </div>
+      <div class="modal-body">
+        <img src="assets/img/注册协议-min.jpg" alt="" width="100%" />
+        <div>
+          <input
+            type="button"
+            class="sub"
+            value="确定"
+            (click)="xieyi = false; setXieyi()"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,253 @@
+:host {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+
+    background: url("../../../assets/img/bj.jpg") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.login-main {
+    min-width: 1200px;
+    height: 100%;
+    overflow: hidden;
+    .wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+.login-box-wrap {
+    position: relative;
+    margin: 0 auto 30px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin-top: 100px;
+    opacity: 0.95;
+    .switch-bar {
+        position: absolute;
+        top: 16px;
+        left: -16px;
+        width: 16px;
+        height: 172px;
+        background: #b9c3d4;
+        border-radius: 10px 0 0 10px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        a {
+            background: url("../../../assets/icon/login-tip-icon.0ed43fb6.png");
+            background-position: -215px -40px !important;
+            width: 7px;
+            height: 10px;
+            margin: 74px 0 0 6px;
+            display: inline-block;
+        }
+        .off a,
+        .login-box-wrap .on a,
+        .login-tip .bro-icon1,
+        .login-tip .bro-icon2,
+        .login-tip h2 span {
+            display: inline-block;
+            // background-image: url(../img/login-tip-icon.0ed43fb6.png);
+            background-repeat: no-repeat;
+        }
+    }
+    .move {
+        display: inline-block;
+        width: 0;
+        transition: all 0.4s ease-in-out;
+        overflow: hidden;
+        .login-tip {
+            float: right;
+            width: 500px;
+            padding: 65px 70px 30px;
+            h2 {
+                i {
+                    font-style: unset;
+                    font-size: 23px;
+                    font-weight: 500;
+                    color: rgba(68, 68, 68, 1);
+
+                    position: relative;
+                    top: -7px;
+                }
+                span {
+                    display: inline-block;
+                    width: 36px;
+                    height: 36px;
+                    background-position: 0px 0;
+                    background-size: cover;
+                    margin-right: 20px;
+                    background-image: url("../../../assets/img/mk_logog.png");
+                }
+            }
+            .txt {
+                padding: 20px 13px !important;
+            }
+            .browser {
+                position: relative;
+            }
+            .line {
+                position: absolute;
+                left: 300px;
+                width: 1px;
+                height: 57px;
+                color: #ccc;
+                margin: 18px 0;
+            }
+            .bro-icon1 {
+                width: 196px;
+                height: 56px;
+            }
+            .bro-icon2 {
+                width: 181px;
+                height: 56px;
+                background-position: 0 -61px;
+            }
+            .download {
+                display: block;
+                height: 38px;
+                line-height: 38px;
+            }
+        }
+    }
+
+    .w710 {
+        width: 600px;
+    }
+    .w0 {
+        width: 0px;
+    }
+    .fr {
+        float: right !important;
+        .login-box {
+            width: 450px !important;
+            margin: 58px 0 58px 0;
+            border-left: 0px;
+            padding: 0 88px;
+            .login-box-tit {
+                font-size: 30px;
+                font-weight: bold;
+                color: rgba(18, 74, 133, 1);
+                text-align: center;
+                margin-bottom: 38px;
+            }
+            .login-itme {
+                position: relative;
+                width: 270px;
+                height: 38px;
+                background: rgba(255, 255, 255, 1);
+                border-radius: 5px;
+                border: 1px solid rgba(115, 116, 130, 1);
+                margin: 0 0px 16px;
+                padding: 4px 15px;
+                input {
+                    border: 0;
+                    vertical-align: top;
+                    width: 90%;
+                    height: 30px;
+                    line-height: 38px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgba(115, 116, 130, 1);
+                }
+            }
+            .validate-input {
+                width: 147px;
+                float: left;
+            }
+            .validate-img {
+                padding-left: 11px;
+                float: left;
+                img {
+                    width: 60px;
+                    height: 26px;
+                }
+                span {
+                    padding-left: 11px;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgba(52, 126, 188, 1);
+                }
+            }
+            .sub {
+                &:active {
+                    opacity: 0.9;
+                    box-shadow: 0 0 5px #847f7f;
+                }
+                display: block;
+                background: #124a85;
+                height: 45px;
+                color: #fff;
+                width: 270px;
+                font-size: 13px;
+                border: 0;
+                border-radius: 2px;
+                transition: all 0.2s ease-in-out;
+            }
+            .login-info {
+                height: 20px;
+                margin-bottom: 17px;
+                .btn-checkbox {
+                    span {
+                        font-size: 11px;
+                        font-weight: 400;
+                        color: rgba(124, 124, 124, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.on {
+    .switch-bar {
+        a {
+            background-position: -206px -40px !important;
+        }
+    }
+    .move {
+        width: 600px;
+    }
+    .fr {
+        .login-box {
+            border-left: 1px solid #979797;
+        }
+    }
+}
+.c-red {
+    color: #c04323;
+}
+.c-808080 {
+    color: #808080;
+}
+@media (max-width: 1479px) {
+    .login-box-wrap {
+        margin-right: 120px;
+    }
+}
+.c-868686 {
+    color: #868686;
+}
+.tac {
+    text-align: center !important;
+}
+.mt60 {
+    margin-top: 60px !important;
+}
+.mt100 {
+    margin-top: 100px !important;
+}
+.fs-14 {
+    font-size: 14px !important;
+}
+.c-8F8F8F {
+    color: #8f8f8f;
+}
+.c-blue {
+    color: #215bbf !important;
+}

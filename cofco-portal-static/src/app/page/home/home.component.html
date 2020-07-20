@@ -1,0 +1,137 @@
+<app-header></app-header>
+<div class="main-body">
+  <div class="flag-banner">
+    <div class="bd">
+      <div
+        class="swiper-container"
+        [swiper]="config"
+        #ionSlides
+        (swiperTouchEnd)="doStartAutoplay()"
+      >
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/img/mc_banner.jpg');"
+          ></div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/img/mc_banner-1.jpg');"
+          ></div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/img/mc_banner-2.jpg');"
+          ></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="advantage" #advantage>
+      <div class="title">
+        <h1>平台优势</h1>
+        <span>Platform advantage</span>
+        <app-svg-line color="#0054BF"></app-svg-line>
+      </div>
+      <div class="fl col-4 tac">
+        <div class="advantage-item">
+          <img src="assets/icon/ys_资金保障.png" alt="" />
+        </div>
+        <p class="decs">强信用</p>
+      </div>
+      <div class="fl col-4 tac">
+        <div class="advantage-item correction">
+          <img src="assets/icon/ys_便捷高效.png" alt="" />
+        </div>
+        <p class="decs">易流转</p>
+      </div>
+      <div class="fl col-4 tac">
+        <div class="advantage-item">
+          <img src="assets/icon/ys_全方位服务.png" alt="" />
+        </div>
+        <p class="decs">可变现</p>
+      </div>
+      <div class="fl col-4 tac">
+        <div class="advantage-item">
+          <img src="assets/icon/ys_全流程线上服务.png" alt="" />
+        </div>
+        <p class="decs">易操作</p>
+      </div>
+    </div>
+  </div>
+  <div class="container introduce-bg" #introduce>
+    <div class="introduce">
+      <div class="title">
+        <h1>平台介绍</h1>
+        <span>Platform introduction</span>
+        <app-svg-line color="#fff"></app-svg-line>
+      </div>
+      <div class="introduce-container">
+        <div class="introduce-item introduce-item-one">
+          <h2>创新中粮供应链金融模式</h2>
+          <div class="line"></div>
+          <p>
+            粮信是中粮金科供应链金融平台流转的中粮集团核心企业信用。是中粮集团核心企业通过中粮金科平台，将优质企业信用转化为可流转、可融资、可灵活配置的创新型供应链金融服务。粮信具有安全、高效、实时的特点。
+          </p>
+        </div>
+        <div class="introduce-item  introduce-item-two">
+          <h2>打造农业产业金融生态圈</h2>
+          <div class="line"></div>
+          <p>
+            中粮集团产业链上的中小企业通过中粮金科平台，将其接收到的粮信进行持有、转让或融资。粮信为中粮集团产业链上的中小企业提供了全新的业务结算工具，既提高了业务结算效率，也为中小企业提供了便捷、低成本的融资渠道。
+          </p>
+        </div>
+        <div class="introduce-item-img imgone">
+          <img src="assets/img/introduce (1).jpg" alt="" />
+        </div>
+        <div class="introduce-item-img imgtwo">
+          <img src="assets/img/introduce (3).jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="new-product">
+      <div class="title">
+        <h1>平台产品</h1>
+        <span>Platform product</span>
+        <app-svg-line color="#0054BF"></app-svg-line>
+      </div>
+      <div class="product-flex">
+        <div class="product-item-img">
+          <img src="assets/img/平台产品图.jpg" alt="" />
+        </div>
+        <div class="product-item">
+          <h3>粮信</h3>
+          <div class="line"></div>
+          <p>
+            为满足中小企业快速回收应收账款、提高资金周转效率而量身定制的产品…
+          </p>
+          <a [routerLink]="['/product']" class="link">查看详情 >></a>
+        </div>
+        <div class="product-item">
+          <h3>ABS</h3>
+          <div class="line"></div>
+          <p>
+            全线上ABS发行支持，专为供应链类ABS小额、碎片化资产特点量身打造，极大提升各环节发行效率。
+          </p>
+          <a href="" class="link">查看详情 >></a>
+        </div>
+        <div class="product-item">
+          <h3>保理</h3>
+          <div class="line"></div>
+          <p>
+            基于中粮核心企业应收账款的反向保理融资服务，搭建资金融通桥梁、助力中小微企业发展，通过大型核心企业为上游中小微企业增信...
+          </p>
+          <a href="" class="link">查看详情 >></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

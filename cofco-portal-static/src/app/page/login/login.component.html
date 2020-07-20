@@ -1,0 +1,109 @@
+<app-login-header></app-login-header>
+<div class="login-main">
+  <div class="wrap">
+    <div #warp class="clearfix fr login-box-wrap">
+      <div
+        class="switch-bar sensors-data"
+        (click)="warp.classList.toggle('on')"
+      >
+        <a href="javascript:;"></a>
+      </div>
+      <div class="move">
+        <div class="login-tip">
+          <h2><span></span><i class="con">温馨提示</i></h2>
+          <div class="tal txt fs-16 c-8F8F8F lh30">
+            您当前的系统环境：
+          </div>
+          <div class="browser-content tac pt20 w400 fs-16 c-8F8F8F">
+            <div class="clearfix">
+              <div class="fl">
+                1、浏览器：强烈推荐:<span class="c-red">Chrome</span>
+              </div>
+              <div class="fr c-green">√</div>
+            </div>
+            <div class="clearfix">
+              <div class="fl">
+                2、操作系统：
+                <span class="c-red">Windows 系统</span>
+              </div>
+              <div class="fr c-green">√</div>
+            </div>
+          </div>
+          <div class="tac fs-14 c-868686 lh30 mt100">
+            请对环境进行升级后，重新打开浏览器进行访问
+          </div>
+          <div class="tac b3 fs-14 c-868686">
+            如有问题请查询
+            <a href="#" target="_blank" class="c-blue">帮助中心</a>
+          </div>
+        </div>
+      </div>
+      <form method="post" id="loginForm" class="fr">
+        <div class="login-box fr">
+          <div class="login-box-tit">供应链金融平台</div>
+          <ul>
+            <li>
+              <div class="login-itme">
+                <span class="input pr"
+                  ><input type="text" placeholder="用户名" name="mobile"/><span
+                    class="error-span"
+                  ></span
+                ></span>
+              </div>
+            </li>
+            <li>
+              <div class="login-itme">
+                <span class="input pr"
+                  ><input
+                    type="password"
+                    placeholder="密码"
+                    name="mobile"/><span class="error-span"></span
+                ></span>
+              </div>
+            </li>
+            <li>
+              <div class="login-itme validate-input">
+                <span class="input pr"
+                  ><input type="text" placeholder="验证码" name="mobile"/><span
+                    class="error-span"
+                  ></span
+                ></span>
+              </div>
+              <div class="validate-img">
+                <img src="assets/icon/101311124074020备份 2.png" alt="KDQU" />
+                <span>换一组</span>
+              </div>
+            </li>
+            <li class="clearfix login-info fs-13">
+              <div class="fl">
+                <span class="btn-checkbox"
+                  ><input type="checkbox" name="" id="" /><span
+                    >记住企业信息</span
+                  ></span
+                >
+              </div>
+              <div class="fr lh25">
+                <a href="#" class="c-blue c-808080">忘记密码</a>
+                |
+                <span
+                  ><a [routerLink]="['/register']" class="c-blue"
+                    >马上注册</a
+                  ></span
+                >
+              </div>
+            </li>
+            <li>
+              <input
+                (click)="login()"
+                value="登录"
+                type="button"
+                id="loginSubmit"
+                class="sub pointer"
+              />
+            </li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

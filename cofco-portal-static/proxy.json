@@ -1,0 +1,40 @@
+{
+    "/fina": {
+        "target": "http://localhost:8080",
+        "secure": false,
+        "router": {
+            "/fina/index": "http://localhost:8080",
+            "/fina/finances": "http://localhost:8080",
+            "/fina/customer": "http://localhost:8080",
+            "/fina/cus": "http://localhost:8080",
+            "/fina/cfca": "http://localhost:8080",
+            "/fina/chain-cust": "http://localhost:8080",
+            "/fina/credibles/list": "http://localhost:8080"
+            
+        }
+    },
+    "/newpaas": {
+        "target": "http://localhost:8080",
+        "secure": false
+    },
+    "/api": {
+        "target": "http://localhost:8080",
+        "secure": false
+    },
+    "/oauth": {
+        "target": "http://localhost:8080",
+        "secure": false,
+        "router": {
+            "/oauth/login/oidc": "http://localhost:8080"
+        }
+    },
+    "/v1": {
+
+        "target": "http://localhost:8080",
+        "secure": false,
+        "router": {
+            "/v1/index": "http://localhost:8080",
+            "/v1/finances": "http://localhost:8080"
+        }
+    }
+}

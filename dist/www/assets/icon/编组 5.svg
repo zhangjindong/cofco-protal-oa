@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="934px" height="11px" viewBox="0 0 934 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+	<title>
+		编组 5
+	</title>
+	<desc>
+		Created with Sketch.
+	</desc>
+	<g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="a/zj_通知" transform="translate(1.000000, -84.000000)">
+			<g id="编组-5" transform="translate(0.000000, 85.000000)">
+				<path d="M497.5,0.5 L937.5,0.5" id="直线备份" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,10">
+				</path>
+				<path d="M-0,0.5 L440,0.5" id="直线备份-2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,10">
+				</path>
+				<polygon id="三角形" transform="translate(468.000000, 5.000000) scale(1, -1) translate(-468.000000, -5.000000) " points="468 0 473 10 463 10">
+				</polygon>
+			</g>
+		</g>
+	</g>
+</svg>

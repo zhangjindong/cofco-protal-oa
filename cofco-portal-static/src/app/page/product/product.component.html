@@ -1,0 +1,166 @@
+<app-header [fixedHeader]="true"></app-header>
+<div class="main-body">
+  <div class="ext-banner">
+    <img src="assets/img/banner2.jpg" alt="" />
+    <div class="banner-text">
+      <div class="mar-top-1">
+        <a [href]="coreweb" target="_blank" class="btn">立即体验</a>
+      </div>
+    </div>
+  </div>
+  <div class="white-bg">
+    <div class="container item-2 oh">
+      <div class="title">
+        <h2 class="tac">产品优势</h2>
+        <span>Platform advantage</span>
+        <app-svg-line color="#0054BF"></app-svg-line>
+      </div>
+      <div class="col-4 fl">
+        <div class="img-bg">
+          <img width="100%" src="assets/icon/ys_可流转备份.png" alt="" />
+        </div>
+        <div class="img-desc">可流转</div>
+        <div class="img-desc-bak">中粮核心企业付款承诺逐级传递</div>
+      </div>
+      <div class="col-4 fl">
+        <div class="img-bg">
+          <img width="100%" src="assets/icon/ys_可拆分备份.png" alt="" />
+        </div>
+        <div class="img-desc">可拆分</div>
+        <div class="img-desc-bak">解决票据无法拆分背书转让难题</div>
+      </div>
+      <div class="col-4 fl">
+        <div class="img-bg">
+          <img width="100%" src="assets/icon/ys_可融资备份.png" alt="" />
+        </div>
+        <div class="img-desc">可贴现</div>
+        <div class="img-desc-bak">中粮核心企业付款承诺即时变现</div>
+      </div>
+      <div class="col-4 fl">
+        <div class="img-bg">
+          <img width="100%" src="assets/icon/ys_可追踪备份.png" alt="" />
+        </div>
+        <div class="img-desc">可跟踪</div>
+        <div class="img-desc-bak">产业链合作伙伴业务路径可追溯</div>
+      </div>
+    </div>
+  </div>
+  <div class="gray-bg">
+    <div class="container item-2">
+      <div class="title">
+        <h2 class="tac">业务流程</h2>
+        <span>Business process</span>
+        <app-svg-line color="#0054BF"></app-svg-line>
+      </div>
+      <div class="bus-flow">
+        <img width="100%" src="assets/img/flow.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="white-bg relative item-2">
+    <div class="container">
+      <div class="title">
+        <h2 class="tac">使用流程</h2>
+        <span>Use Flow</span>
+        <app-svg-line color="#0054BF"></app-svg-line>
+      </div>
+      <div class="relative flow-box">
+        <div class="com-bg">
+          <div class="com-bg-box">
+            <img
+              [ngClass]="{ hide: selectCPNum !== 0 }"
+              width="100%"
+              height="100%"
+              src="assets/img/小图-1.png"
+              alt=""
+            />
+            <img
+              [ngClass]="{ hide: selectCPNum !== 1 }"
+              width="100%"
+              height="100%"
+              src="assets/img/小图-2.png"
+              alt=""
+            />
+            <img
+              [ngClass]="{ hide: selectCPNum !== 2 }"
+              width="100%"
+              height="100%"
+              src="assets/img/小图-3.png"
+              alt=""
+            />
+            <img
+              [ngClass]="{ hide: selectCPNum !== 3 }"
+              width="100%"
+              height="100%"
+              src="assets/img/小图-4.png"
+              alt=""
+            />
+            <img
+              [ngClass]="{ hide: selectCPNum !== 4 }"
+              width="100%"
+              height="100%"
+              src="assets/img/小图-5.png"
+              alt=""
+            />
+            <img
+              [ngClass]="{ hide: selectCPNum !== 5 }"
+              width="100%"
+              height="100%"
+              src="assets/img/小图-6.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="ls-1 relative">
+          <ul class="flow">
+            <li
+              [ngClass]="{ active: selectCPNum == 0 }"
+              (click)="selectCPNum = 0"
+            >
+              <div class="flow-num">1</div>
+              <div class="flow-text">邀请注册</div>
+            </li>
+            <li
+              [ngClass]="{ active: selectCPNum == 1 }"
+              (click)="selectCPNum = 1"
+            >
+              <div class="flow-num">2</div>
+              <div class="flow-text">授信申请</div>
+            </li>
+            <li
+              [ngClass]="{ active: selectCPNum == 2 }"
+              (click)="selectCPNum = 2"
+            >
+              <div class="flow-num">3</div>
+              <div class="flow-text">创建应付账款</div>
+            </li>
+            <li
+              [ngClass]="{ active: selectCPNum == 3 }"
+              (click)="selectCPNum = 3"
+            >
+              <div class="flow-num">4</div>
+              <div class="flow-text">开立粮信</div>
+            </li>
+            <li
+              [ngClass]="{ active: selectCPNum == 4 }"
+              (click)="selectCPNum = 4"
+            >
+              <div class="flow-num">5</div>
+              <div class="flow-text">粮信流转</div>
+            </li>
+            <li
+              [ngClass]="{ active: selectCPNum == 5 }"
+              (click)="selectCPNum = 5"
+            >
+              <div class="flow-num">6</div>
+              <div class="flow-text">融资申请</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

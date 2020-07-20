@@ -1,0 +1,189 @@
+.header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  z-index: 999;
+  background: transparent;
+  transition: background 1s;
+  -moz-transition: background 1s; /* Firefox 4 */
+  -webkit-transition: background 1s; /* Safari 和 Chrome */
+  -o-transition: background 1s; /* Opera */
+}
+.header .logo {
+  float: left;
+  margin-top: 20px;
+}
+.logo-black {
+  display: none;
+}
+.logo-link {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  margin-right: 16px;
+}
+// .logo-link::after {
+//     content: "";
+//     display: block;
+//     height: 100%;
+//     width: 1px;
+//     background: rgba(255, 255, 255, 0.3);
+//     position: absolute;
+//     right: 0;
+//     top: 2px;
+// }
+.logo-link .img {
+  display: inline-block;
+  width: 375px;
+  height: 63px;
+  background: url('../../../assets/img/logo.png');
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+.logo-text {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.header .user {
+  width: auto;
+  height: 100%;
+  background: transparent;
+  margin-top: 25px;
+  color: #fff;
+  float: right;
+}
+.header .user img {
+  width: 36px;
+  height: 36px;
+}
+.header .user a {
+  float: none;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  padding: 0 10px;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+}
+.header .user a:first-of-type::after {
+  content: '';
+  display: block;
+  height: 18px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+.header .user a span {
+  color: #fff;
+}
+.header .user .log-in {
+  display: none;
+}
+.img-user {
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+  vertical-align: middle;
+  background: url('../../../assets/img/KHCFDC_头像.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header .nav {
+  float: left;
+  height: 90px;
+  margin-left: 10px;
+  padding-top: 0;
+  line-height: 44px;
+  margin-right: 20px;
+  list-style: none;
+}
+.header .nav > li {
+  float: left;
+  border: none;
+  height: 85px;
+  line-height: 90px;
+  padding: 0 15px;
+  position: relative;
+}
+.header .nav-downlist {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 86px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 0 10px #847f7f;
+}
+.header .nav-downlist::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  position: absolute;
+  top: -8px;
+  left: 51px;
+}
+.header .nav-downlist > li {
+  height: 60px;
+  line-height: 60px;
+  background: #fff;
+}
+.header .nav-downlist > li:hover {
+  background: #f5f8fc;
+}
+.header .nav-downlist > li a {
+  font-size: 16px;
+  color: #333;
+}
+.header .nav > li:hover .nav-downlist {
+  display: block;
+}
+.header .nav > li > a {
+  font-size: 18px;
+  line-height: 20px;
+  /* color: #d0d0d0; */
+  color: #fff;
+}
+.fixed-header {
+  background: #fff;
+  border-bottom: 2px solid #0054bf;
+}
+.fixed-header .logo-link .img {
+  background: url('../../../assets/img/logo_2.png');
+  background-repeat: no-repeat;
+}
+.fixed-header .img-user {
+  background: url('../../../assets/img/KHCFDC_头像_2.png');
+  background-size: 100% 100%;
+}
+.fixed-header .logo-link::after {
+  background: #333;
+}
+.fixed-header * {
+  color: #333 !important;
+}
+.fixed-header .logo-text {
+  color: #666666 !important;
+}
+.fixed-header.header .user a:first-of-type::after {
+  background: #333;
+}
+.header .nav li a.active {
+  color: #fff;
+}
+.fixed-header.header .nav li.current {
+  background: #0054bf;
+  margin-top: 3px;
+}
+.fixed-header.header .nav li.current > a {
+  color: #fff !important;
+}

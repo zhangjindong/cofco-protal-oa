@@ -1,0 +1,161 @@
+
+// /*************侧边栏******************/
+// .sidebar {
+//     position: fixed;
+//     top: 160px;
+//     right: 0;
+//     z-index: 99;
+//     box-shadow: 0px 0px 5px #adbfe4;
+//     background: #fff;
+// }
+// .sidebar ul li {
+//     position: relative;
+//     height: auto;
+//     width: 84px;
+//     text-align: center;
+//     padding: 5px;
+//     box-sizing: border-box;
+//     cursor: pointer;
+//     margin-top: 1px;
+// }
+// .sidebar ul li:hover .menu,
+// .sidebar ul .active .menu {
+//     display: block;
+// }
+// .sidebar ul li .dot {
+//     display: block;
+//     width: 50px;
+//     height: 50px;
+//     text-indent: -999px;
+//     overflow: hidden;
+//     background: url(../images/icon/right-menu.png) 16px -25px no-repeat #fff;
+// }
+// .sidebar ul li .t1 {
+//     background-position: 14px -64px;
+// }
+// .sidebar ul li .t2 {
+//     background-position: 14px -25px;
+//     cursor: pointer;
+// }
+// .sidebar ul li .t3 {
+//     background-position: 12px 16px;
+// }
+// .sidebar ul li .t5 {
+//     background-position: 15px -108px;
+// }
+// .sidebar ul li .t4 {
+//     cursor: pointer;
+// }
+// .sidebar ul li .dot:hover {
+//     background-color: #0c419a;
+// }
+// .sidebar ul li .t1:hover {
+//     background-position: -31px -64px;
+// }
+// .sidebar ul li .t2:hover {
+//     background-position: -31px -25px;
+// }
+// .sidebar ul li .t3:hover {
+//     background-position: -31px 16px;
+// }
+// .sidebar ul li .t4:hover {
+//     background-position: -50px 0;
+// }
+// .sidebar ul li .t5:hover {
+//     background-position: -32px -107px;
+// }
+
+// .sidebar ul li .tel {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     left: -204px;
+//     width: 203px;
+//     height: 50px;
+//     line-height: 50px;
+//     font-size: 14px;
+//     background: #fff;
+// }
+// .sidebar ul li .tel b {
+//     position: absolute;
+//     right: -8px;
+//     top: 20px;
+//     width: 8px;
+//     height: 9px;
+//     background: url("../images/triangle.png") no-repeat;
+// }
+// .sidebar ul li .tel p {
+//     padding-left: 15px;
+// }
+// .sidebar ul li .tel p span {
+//     color: #0c419a;
+//     font-weight: bold;
+// }
+// .sidebar ul li .wx,
+// .sidebar ul li .app {
+//     display: none;
+//     position: absolute;
+//     top: -54px;
+//     left: -162px;
+//     width: 160px;
+// }
+// .sidebar ul li .wx b,
+// .sidebar ul li .app b {
+//     position: absolute;
+//     right: -8px;
+//     top: 75px;
+//     width: 8px;
+//     height: 9px;
+//     background: url("../images/triangle.png") no-repeat;
+// }
+// .sidebar ul li .wx img {
+//     display: block;
+// }
+// .sidebar ul li .kefu {
+//     left: -100px;
+//     width: 100px;
+// }
+// .siderbar-title {
+//     position: absolute;
+//     top: -40px;
+//     left: 0;
+//     display: inline-block;
+//     width: 160px;
+//     height: 40px;
+//     line-height: 44px;
+//     text-align: center;
+//     font-size: 14px;
+//     color: #000;
+//     background: #fff;
+// }
+
+// .sidebar-1 {
+//     position: absolute;
+//     top: -45px;
+// }
+// .sidebar-1 + p {
+//     padding-top: 50px;
+// }
+// .sidebar-2 + p {
+//     margin-top: 10px;
+// }
+// .sidebar ul li p::after {
+//     content: "";
+//     display: block;
+//     height: 1px;
+//     width: 100%;
+//     background: #e9edf4;
+//     margin-top: 5px;
+// }
+// .sidebar ul li:last-of-type p::after {
+//     content: "";
+//     display: block;
+//     height: 0px;
+//     width: 100%;
+//     background: #fff;
+//     margin-top: 0px;
+// }
+// .sidebar ul li .wx,
+// .sidebar ul li .app {
+//     box-shadow: 0px 0px 5px #adbfe4;
+// }

@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+.oh {
+    overflow: hidden;
+}
+.hide {
+    display: none;
+}
+.container {
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+}
+.tac {
+    text-align: center;
+}
+.relative {
+    position: relative;
+}
+.clearfix {
+    clear: both;
+}
+.text-right {
+    text-align: right;
+}
+.main-body {
+    padding-top: 90px;
+}
+* {
+    box-sizing: border-box;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+/* tap */
+.product-tap {
+    width: 1170px;
+    margin: 0 auto;
+}
+.product-tap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.tap-item {
+    float: left;
+    width: 20%;
+    padding: 20px 0;
+}
+.tap-item > P {
+    margin-top: 15px;
+    font-size: 14px;
+}
+.tap-item.active {
+    position: relative;
+    background: #e9eff8;
+    cursor: pointer;
+}
+.tap-item.active::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #e9eff8;
+    position: absolute;
+    left: 102px;
+    bottom: -15px;
+}
+.product-desc {
+    background: #f2f6fb;
+    padding: 50px 0;
+}
+.product-desc:first-child li {
+    position: relative;
+    opacity: 0;
+    top: 300px;
+    -ms-transition: top 1s, opacity 1s;
+    -moz-transition: top 1s, opacity 1s;
+    -webkit-transition: top 1s, opacity 1s;
+    -o-transition: opactopity 1s, opacity 1s;
+    transition: top 1s, opacity 1s;
+}
+@media screen and (max-width: 1169px) {
+    .header {
+        /* overflow: hidden; */
+    }
+    /* .header .user a span{
+        color: #b9b9b9;
+    }
+    .header .user a:first-of-type::after{
+        background: #b9b9b9;
+    } */
+    .header {
+        width: 1170px;
+    }
+    .main-body {
+        width: 1170px;
+    }
+    .footer {
+        width: 1170px;
+    }
+}
