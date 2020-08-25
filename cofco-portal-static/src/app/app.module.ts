@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,6 +26,16 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { LinksService } from './shared/links.service';
 import { EnvService } from './shared/env.service';
+import { IconsProviderModule } from './icons-provider.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { FormsModule } from '@angular/forms';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { zh_CN } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+
+registerLocaleData(zh);
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -51,6 +62,10 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppRoutingModule,
     KeycloakAngularModule,
     HttpClientModule,
+    IconsProviderModule,
+    NzLayoutModule,
+    NzMenuModule,
+    FormsModule,
   ],
   providers: [
     {
@@ -63,6 +78,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
       multi: true,
       deps: [KeycloakService, EnvService],
     },
+    { provide: NZ_I18N, useValue: zh_CN },
   ],
   bootstrap: [AppComponent],
 })

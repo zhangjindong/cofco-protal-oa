@@ -26,9 +26,18 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/silent-check-sso.html"
+              "src/silent-check-sso.html",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
-            "styles": ["src/styles.scss", "src/themes/base.scss"],
+            "styles": [
+              "src/theme.less",
+              "src/styles.scss",
+              "src/themes/base.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -99,8 +108,14 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss", "src/themes/base.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss",
+              "src/themes/base.scss"
+            ],
             "scripts": []
           }
         },
@@ -112,7 +127,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {

@@ -37,6 +37,11 @@ const routes: Routes = [
     path: 'product',
     component: ProductComponent,
   },
+  {
+    path: 'welcome',
+    loadChildren: () =>
+      import('./pages/welcome/welcome.module').then(m => m.WelcomeModule),
+  },
   { path: '**', redirectTo: '/home' },
 ];
 
