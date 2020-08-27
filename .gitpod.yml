@@ -1,0 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - zhanghua.vscodium-language-pack-zh-cn@1.46.1:glAJkST/OwacUEFznKfbkw==
