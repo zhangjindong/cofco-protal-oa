@@ -46,9 +46,16 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 
 ## docker keycloak
-docker run --name keycloak -d -p 443:443 -p 9990:9990 -p 8080:8080 \
+docker run --name keycloak -d -p 443:443 -p 9990:9990 -p 8080:8081 \
+-e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin \
+--restart=always jboss/keycloak
+
+docker cp keycloak:/opt/jboss/keycloak ./keycloak
+
+chown 1000:1000 /root/data/keycloak -R
+
+docker run --name keycloak -d -p 443:443 -p 9990:9990 -p 8080:8081 \
 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin \
 -v /root/data/keycloak:/opt/jboss/keycloak \
 --restart=always jboss/keycloak
 
-chown 1000:1000 /data/keycloak -R
