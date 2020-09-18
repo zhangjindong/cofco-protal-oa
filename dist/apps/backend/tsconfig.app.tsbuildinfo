@@ -2737,7 +2737,7 @@
         "affectsGlobalScope": false
       },
       "../../../apps/backend/src/keycloak-registration/keycloak-registration.controller.ts": {
-        "version": "8f98bcb69b6dc14f4e089673ea078f71a19e9848f588a4005ec67f3f6b2f05b0",
+        "version": "88a635bf4ee10a82109d96f71b3c5f7906509e216d233ce3497d0101d9af7351",
         "signature": "aa5313c3ed740c825fd37fca2e9838d32cf4e64aa0d2cb9dbd7ac3c549e58b38",
         "affectsGlobalScope": false
       },
@@ -2747,8 +2747,8 @@
         "affectsGlobalScope": false
       },
       "../../../apps/backend/src/config/configuration.ts": {
-        "version": "311a1546a7138a501a9e4d4bf60deeddb357ba1fcfb73ad3109f5b594882bc0a",
-        "signature": "98256dd6452e78bf9e2f5ed7c354a5e916316dcd3de4fed884ab6815493209e5",
+        "version": "1643fbf4ba7c20066c09ffbef57eb94b548b1b790c5b1c36847ef0128f5c8c54",
+        "signature": "92149d50df9c13e76ef9f48303692839f223a0e5e9e35ff61eecd10b9b59455a",
         "affectsGlobalScope": false
       },
       "../../../apps/backend/src/app.module.ts": {

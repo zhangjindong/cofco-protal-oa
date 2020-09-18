@@ -1,6 +1,5 @@
-import { KeycloakService } from 'keycloak-angular';
+import { KeycloakService, KeycloakConfig } from 'keycloak-angular';
 
-import { environment } from '../../environments/environment';
 import { EnvService } from '../shared/env.service';
 
 export function initializer(
@@ -9,12 +8,15 @@ export function initializer(
 ): () => Promise<any> {
   return (): Promise<any> => {
     return new Promise(async (resolve, reject) => {
-      const { keycloakConfig } = environment;
       try {
         const keycloakEnv: any = await envService
           .getEnvs('keycloak')
           .toPromise();
-        keycloakConfig.url = keycloakEnv.url;
+        const keycloakConfig: KeycloakConfig = {
+          url: keycloakEnv.url,
+          clientId: keycloakEnv.web.client,
+          realm: keycloakEnv.realm,
+        };
         await keycloak.init({
           config: keycloakConfig,
           initOptions: {
@@ -22,9 +24,7 @@ export function initializer(
             onLoad: 'check-sso',
             checkLoginIframe: true,
             silentCheckSsoRedirectUri:
-              window.location.origin +
-              (environment.production ? '' : '') +
-              '/silent-check-sso.html',
+              window.location.origin + '/silent-check-sso.html',
           },
           bearerExcludedUrls: [],
         });
