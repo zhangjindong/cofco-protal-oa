@@ -94,11 +94,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(1);
 const app_module_1 = __webpack_require__(2);
 const config_1 = __webpack_require__(6);
-const logger_middleware_1 = __webpack_require__(39);
-const transform_interceptor_1 = __webpack_require__(47);
-const http_exception_filter_1 = __webpack_require__(48);
-const any_exception_filter_1 = __webpack_require__(49);
-const validation_pipe_1 = __webpack_require__(50);
+const logger_middleware_1 = __webpack_require__(43);
+const transform_interceptor_1 = __webpack_require__(51);
+const http_exception_filter_1 = __webpack_require__(52);
+const any_exception_filter_1 = __webpack_require__(53);
+const validation_pipe_1 = __webpack_require__(54);
 const swagger_1 = __webpack_require__(9);
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 async function bootstrap() {
@@ -153,7 +153,8 @@ const organization_module_1 = __webpack_require__(25);
 const keycloak_admin_module_1 = __webpack_require__(28);
 const user_module_1 = __webpack_require__(33);
 const message_module_1 = __webpack_require__(35);
-const configuration_1 = __webpack_require__(38);
+const keycloak_registration_module_1 = __webpack_require__(38);
+const configuration_1 = __webpack_require__(42);
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -170,6 +171,7 @@ AppModule = __decorate([
             keycloak_admin_module_1.KeycloakAdminModule,
             user_module_1.UserModule,
             message_module_1.MessageModule,
+            keycloak_registration_module_1.KeycloakRegistrationModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
@@ -1353,6 +1355,136 @@ exports.MessageService = MessageService;
 
 "use strict";
 
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeycloakRegistrationModule = void 0;
+const common_1 = __webpack_require__(3);
+const keycloak_registration_controller_1 = __webpack_require__(39);
+const keycloak_registration_service_1 = __webpack_require__(40);
+let KeycloakRegistrationModule = class KeycloakRegistrationModule {
+};
+KeycloakRegistrationModule = __decorate([
+    common_1.Module({
+        controllers: [keycloak_registration_controller_1.KeycloakRegistrationController],
+        providers: [keycloak_registration_service_1.KeycloakRegistrationService]
+    })
+], KeycloakRegistrationModule);
+exports.KeycloakRegistrationModule = KeycloakRegistrationModule;
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var _a, _b, _c;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeycloakRegistrationController = void 0;
+const common_1 = __webpack_require__(3);
+const rxjs_1 = __webpack_require__(7);
+const swagger_1 = __webpack_require__(9);
+const keycloak_registration_service_1 = __webpack_require__(40);
+const config_1 = __webpack_require__(6);
+let KeycloakRegistrationController = class KeycloakRegistrationController {
+    constructor(config, keycloakRegistration) {
+        this.config = config;
+        this.keycloakRegistration = keycloakRegistration;
+    }
+    clientRegistration(accessToken) {
+        const keycloakConfig = this.config.get('keycloak');
+        return this.keycloakRegistration.createClient({
+            accessToken,
+            endpoint: `${this.config.get('keycloak.url')}/realms/${this.config.get('keycloak.realmName')}/clients-registrations`,
+        }, {
+            clientId: this.config.get('keycloak.client'),
+            serviceAccountsEnabled: true,
+            adminUrl: keycloakConfig.adminUrl,
+            bearerOnly: true,
+            secret: keycloakConfig.secret,
+            name: keycloakConfig.name,
+            description: keycloakConfig.description,
+        });
+    }
+};
+__decorate([
+    common_1.Get(),
+    __param(0, common_1.Query('accessToken')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", typeof (_a = typeof rxjs_1.Observable !== "undefined" && rxjs_1.Observable) === "function" ? _a : Object)
+], KeycloakRegistrationController.prototype, "clientRegistration", null);
+KeycloakRegistrationController = __decorate([
+    swagger_1.ApiTags('keycloak-registration'),
+    common_1.Controller('keycloak-registration'),
+    __metadata("design:paramtypes", [typeof (_b = typeof config_1.ConfigService !== "undefined" && config_1.ConfigService) === "function" ? _b : Object, typeof (_c = typeof keycloak_registration_service_1.KeycloakRegistrationService !== "undefined" && keycloak_registration_service_1.KeycloakRegistrationService) === "function" ? _c : Object])
+], KeycloakRegistrationController);
+exports.KeycloakRegistrationController = KeycloakRegistrationController;
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeycloakRegistrationService = void 0;
+const common_1 = __webpack_require__(3);
+const rxjs_1 = __webpack_require__(7);
+const keycloakClientRegistration = __webpack_require__(41);
+const operators_1 = __webpack_require__(8);
+let KeycloakRegistrationService = class KeycloakRegistrationService {
+    getClient(options, clientId) {
+        return rxjs_1.from(keycloakClientRegistration.get(options, clientId)).pipe(operators_1.catchError(error => {
+            return rxjs_1.of({ code: 500, error });
+        }));
+    }
+    createClient(options, client) {
+        return rxjs_1.from(keycloakClientRegistration.create(options, client));
+    }
+};
+KeycloakRegistrationService = __decorate([
+    common_1.Injectable()
+], KeycloakRegistrationService);
+exports.KeycloakRegistrationService = KeycloakRegistrationService;
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+module.exports = require("keycloak-client-registration");
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = () => ({
     port: parseInt(process.env.PORT, 10) || 8080,
@@ -1418,7 +1550,11 @@ exports.default = () => ({
     keycloak: {
         url: process.env.SERVICE_KEYCLOAK_ADDRESS || 'http://sso.qloud.io/auth',
         realmName: process.env.KEYCLOAK_REALM_NAME || 'cofco',
-        client: process.env.KEYCLOAK_CLIENT || 'factbusicorewebnewpaas',
+        client: process.env.KEYCLOAK_CLIENT || 'portal_node',
+        adminUrl: process.env.KEYCLOAK_ROOTURL || 'http://portal.baoli.com:4200',
+        secret: process.env.KEYCLOAK_SECRET || 'd94f33fb-7752-4d03-9b88-a6f1c0ed9d52',
+        name: process.env.KEYCLOAK_NAME || '门户客户端',
+        description: process.env.KEYCLOAK_DESCRIPTION || '门户客户端',
         admin: {
             clientId: process.env.KEYCLOAK_ADMIN_CLI_CLIENT_ID || 'admin-cli',
             username: process.env.KEYCLOAK_ADMIN_CLI_USERNAME || 'cofco_admin',
@@ -1437,14 +1573,14 @@ exports.default = () => ({
 
 
 /***/ }),
-/* 39 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.logger = void 0;
-const log4js_1 = __webpack_require__(40);
+const log4js_1 = __webpack_require__(44);
 function logger(req, res, next) {
     const code = res.statusCode;
     next();
@@ -1472,7 +1608,7 @@ exports.logger = logger;
 
 
 /***/ }),
-/* 40 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1480,12 +1616,12 @@ exports.logger = logger;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Logger = exports.ContextTrace = exports.LoggerLevel = void 0;
 const Path = __webpack_require__(14);
-const Log4js = __webpack_require__(41);
-const Util = __webpack_require__(42);
-const Moment = __webpack_require__(43);
-const StackTrace = __webpack_require__(44);
-const Chalk = __webpack_require__(45);
-const log4js_1 = __webpack_require__(46);
+const Log4js = __webpack_require__(45);
+const Util = __webpack_require__(46);
+const Moment = __webpack_require__(47);
+const StackTrace = __webpack_require__(48);
+const Chalk = __webpack_require__(49);
+const log4js_1 = __webpack_require__(50);
 var LoggerLevel;
 (function (LoggerLevel) {
     LoggerLevel["ALL"] = "ALL";
@@ -1602,37 +1738,37 @@ exports.Logger = Logger;
 
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ (function(module, exports) {
 
 module.exports = require("log4js");
 
 /***/ }),
-/* 42 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = require("util");
 
 /***/ }),
-/* 43 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = require("moment");
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports) {
 
 module.exports = require("stacktrace-js");
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports) {
 
 module.exports = require("chalk");
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1703,7 +1839,7 @@ exports.default = log4jsConfig;
 
 
 /***/ }),
-/* 47 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1718,7 +1854,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TransformInterceptor = void 0;
 const common_1 = __webpack_require__(3);
 const operators_1 = __webpack_require__(8);
-const log4js_1 = __webpack_require__(40);
+const log4js_1 = __webpack_require__(44);
 let TransformInterceptor = class TransformInterceptor {
     intercept(context, next) {
         const req = context.getArgByIndex(1).req;
@@ -1745,7 +1881,7 @@ exports.TransformInterceptor = TransformInterceptor;
 
 
 /***/ }),
-/* 48 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1759,7 +1895,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HttpExceptionFilter = void 0;
 const common_1 = __webpack_require__(3);
-const log4js_1 = __webpack_require__(40);
+const log4js_1 = __webpack_require__(44);
 let HttpExceptionFilter = class HttpExceptionFilter {
     catch(exception, host) {
         const ctx = host.switchToHttp();
@@ -1788,7 +1924,7 @@ exports.HttpExceptionFilter = HttpExceptionFilter;
 
 
 /***/ }),
-/* 49 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1802,7 +1938,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AllExceptionsFilter = void 0;
 const common_1 = __webpack_require__(3);
-const log4js_1 = __webpack_require__(40);
+const log4js_1 = __webpack_require__(44);
 let AllExceptionsFilter = class AllExceptionsFilter {
     catch(exception, host) {
         const ctx = host.switchToHttp();
@@ -1833,7 +1969,7 @@ exports.AllExceptionsFilter = AllExceptionsFilter;
 
 
 /***/ }),
-/* 50 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1847,9 +1983,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ValidationPipe = void 0;
 const common_1 = __webpack_require__(3);
-const class_validator_1 = __webpack_require__(51);
-const class_transformer_1 = __webpack_require__(52);
-const log4js_1 = __webpack_require__(40);
+const class_validator_1 = __webpack_require__(55);
+const class_transformer_1 = __webpack_require__(56);
+const log4js_1 = __webpack_require__(44);
 let ValidationPipe = class ValidationPipe {
     async transform(value, { metatype }) {
         console.log(`value:`, value, 'metatype: ', metatype);
@@ -1877,13 +2013,13 @@ exports.ValidationPipe = ValidationPipe;
 
 
 /***/ }),
-/* 51 */
+/* 55 */
 /***/ (function(module, exports) {
 
 module.exports = require("class-validator");
 
 /***/ }),
-/* 52 */
+/* 56 */
 /***/ (function(module, exports) {
 
 module.exports = require("class-transformer");

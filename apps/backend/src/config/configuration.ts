@@ -67,7 +67,12 @@ export default () => ({
   keycloak: {
     url: process.env.SERVICE_KEYCLOAK_ADDRESS || 'http://sso.qloud.io/auth',
     realmName: process.env.KEYCLOAK_REALM_NAME || 'cofco',
-    client: process.env.KEYCLOAK_CLIENT || 'factbusicorewebnewpaas',
+    client: process.env.KEYCLOAK_CLIENT || 'portal_node',
+    adminUrl: process.env.KEYCLOAK_ROOTURL || 'http://portal.baoli.com:4200',
+    secret:
+      process.env.KEYCLOAK_SECRET || 'd94f33fb-7752-4d03-9b88-a6f1c0ed9d52',
+    name: process.env.KEYCLOAK_NAME || '门户客户端',
+    description: process.env.KEYCLOAK_DESCRIPTION || '门户客户端',
     admin: {
       clientId: process.env.KEYCLOAK_ADMIN_CLI_CLIENT_ID || 'admin-cli',
       username: process.env.KEYCLOAK_ADMIN_CLI_USERNAME || 'cofco_admin', //'keycloak',

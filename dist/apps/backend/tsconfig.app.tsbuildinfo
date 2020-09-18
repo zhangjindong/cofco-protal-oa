@@ -2721,13 +2721,38 @@
         "signature": "6f3ad4d6feae0a27bd7a0529297a3ebcefcfde9fd8db76261760888377768037",
         "affectsGlobalScope": false
       },
+      "../../../apps/backend/src/keycloak-registration/registration.ts": {
+        "version": "7a865e33e093852236e886b1464dad7f33a1ddf92605e8c60c2c664f25047b9a",
+        "signature": "5bd973576e582a09389022553e8006f70dab5c3a94c61ba04a0e69fb9a268421",
+        "affectsGlobalScope": false
+      },
+      "../../../apps/backend/src/keycloak-registration/options.interface.ts": {
+        "version": "ee2eaa41e46778ae87fe851d4b630779cbf7bf97a492daa14c1b0a9db20b697e",
+        "signature": "4d592b8db384b7e474007f8d0bb0a00b21c154f036cdc08a4680e6e01b829d15",
+        "affectsGlobalScope": false
+      },
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.service.ts": {
+        "version": "513ddf3979524cefe13bd05f1b6d6e52ebbcabbf42c182997922b78df773a03c",
+        "signature": "9d616a6aa263274a1053c86b1b1b82140dde9d594976977f2cd3f3bc5880563a",
+        "affectsGlobalScope": false
+      },
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.controller.ts": {
+        "version": "8f98bcb69b6dc14f4e089673ea078f71a19e9848f588a4005ec67f3f6b2f05b0",
+        "signature": "aa5313c3ed740c825fd37fca2e9838d32cf4e64aa0d2cb9dbd7ac3c549e58b38",
+        "affectsGlobalScope": false
+      },
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.module.ts": {
+        "version": "de2d42360d5533159480ff81cb094b256f92b203452acecefce9242dc8e1397e",
+        "signature": "c64d6d1b9d94740eccbfb8fe7161dc1a54d4c7f810c72969d1f3c841de92d0b6",
+        "affectsGlobalScope": false
+      },
       "../../../apps/backend/src/config/configuration.ts": {
-        "version": "c90e62ff44be81497afa8d555f5ba73d518365059347ffee0810a0f6e5070434",
-        "signature": "c4a9190ad728742a6123832a280728343623009ef4acfb129149401978c49af1",
+        "version": "311a1546a7138a501a9e4d4bf60deeddb357ba1fcfb73ad3109f5b594882bc0a",
+        "signature": "98256dd6452e78bf9e2f5ed7c354a5e916316dcd3de4fed884ab6815493209e5",
         "affectsGlobalScope": false
       },
       "../../../apps/backend/src/app.module.ts": {
-        "version": "17f5f8b16e68fc27645ced7a343a34152bf223d406fb3b55e6a72dedaecd04f0",
+        "version": "35eed5ac5308ecf495bd3c8401c7f1ba45c3e962fe9c0aa04c0603a2a22f052d",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -3758,6 +3783,7 @@
         "../../../apps/backend/src/app.service.ts",
         "../../../apps/backend/src/config/configuration.ts",
         "../../../apps/backend/src/keycloak-admin/keycloak-admin.module.ts",
+        "../../../apps/backend/src/keycloak-registration/keycloak-registration.module.ts",
         "../../../apps/backend/src/message/message.module.ts",
         "../../../apps/backend/src/organization/organization.module.ts",
         "../../../apps/backend/src/user/user.module.ts",
@@ -3869,6 +3895,56 @@
         "../../../node_modules/rxjs/operators/index.d.ts"
       ],
       "../../../apps/backend/src/keycloak-admin/model/keycloak-user.dto.ts": [
+        "../../../node_modules/@types/graceful-fs/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.controller.ts": [
+        "../../../apps/backend/src/keycloak-registration/keycloak-registration.service.ts",
+        "../../../apps/backend/src/keycloak-registration/registration.ts",
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/config/index.d.ts",
+        "../../../node_modules/@nestjs/swagger/index.d.ts",
+        "../../../node_modules/@types/graceful-fs/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.module.ts": [
+        "../../../apps/backend/src/keycloak-registration/keycloak-registration.controller.ts",
+        "../../../apps/backend/src/keycloak-registration/keycloak-registration.service.ts",
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@types/graceful-fs/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.service.ts": [
+        "../../../apps/backend/src/keycloak-registration/options.interface.ts",
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/config/index.d.ts",
+        "../../../node_modules/@types/graceful-fs/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/keycloak-admin/lib/defs/clientRepresentation.d.ts",
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/rxjs/operators/index.d.ts"
+      ],
+      "../../../apps/backend/src/keycloak-registration/options.interface.ts": [
+        "../../../node_modules/@types/graceful-fs/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../apps/backend/src/keycloak-registration/registration.ts": [
         "../../../node_modules/@types/graceful-fs/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -10316,6 +10392,16 @@
         "../../../node_modules/keycloak-admin/lib/index.d.ts",
         "../../../node_modules/rxjs/index.d.ts"
       ],
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.controller.ts": [
+        "../../../apps/backend/src/keycloak-registration/keycloak-registration.service.ts",
+        "../../../node_modules/@nestjs/config/index.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.service.ts": [
+        "../../../apps/backend/src/keycloak-registration/options.interface.ts",
+        "../../../node_modules/keycloak-admin/lib/defs/clientRepresentation.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
       "../../../apps/backend/src/message/message.controller.ts": [
         "../../../apps/backend/src/message/message.service.ts",
         "../../../node_modules/rxjs/index.d.ts"
@@ -16613,6 +16699,11 @@
       "../../../apps/backend/src/keycloak-admin/keycloak-admin.module.ts",
       "../../../apps/backend/src/keycloak-admin/keycloak-admin.service.ts",
       "../../../apps/backend/src/keycloak-admin/model/keycloak-user.dto.ts",
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.controller.ts",
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.module.ts",
+      "../../../apps/backend/src/keycloak-registration/keycloak-registration.service.ts",
+      "../../../apps/backend/src/keycloak-registration/options.interface.ts",
+      "../../../apps/backend/src/keycloak-registration/registration.ts",
       "../../../apps/backend/src/main.ts",
       "../../../apps/backend/src/message/message.controller.ts",
       "../../../apps/backend/src/message/message.module.ts",

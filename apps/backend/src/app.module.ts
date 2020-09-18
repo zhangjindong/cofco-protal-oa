@@ -7,6 +7,7 @@ import { OrganizationModule } from './organization/organization.module';
 import { KeycloakAdminModule } from './keycloak-admin/keycloak-admin.module';
 import { UserModule } from './user/user.module';
 import { MessageModule } from './message/message.module';
+import { KeycloakRegistrationModule } from './keycloak-registration/keycloak-registration.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -22,6 +23,7 @@ import configuration from './config/configuration';
     KeycloakAdminModule,
     UserModule,
     MessageModule,
+    KeycloakRegistrationModule,
   ],
   controllers: [AppController],
   providers: [AppService],

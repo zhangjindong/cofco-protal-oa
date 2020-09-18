@@ -32,6 +32,7 @@
     "connect-history-api-fallback": "^1.6.0",
     "fastify-static": "^2.7.0",
     "keycloak-admin": "^1.13.0",
+    "keycloak-client-registration": "^0.1.0",
     "log4js": "^6.3.0",
     "moment": "^2.26.0",
     "nestjs-config": "^1.4.6",
