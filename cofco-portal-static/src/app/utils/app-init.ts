@@ -12,7 +12,7 @@ export function initializer(
         const keycloakEnv: any = await envService
           .getEnvs('keycloak')
           .toPromise();
-          
+
         const keycloakConfig: KeycloakConfig = {
           url: keycloakEnv.url,
           clientId: keycloakEnv.web.client,
