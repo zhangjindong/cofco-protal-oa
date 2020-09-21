@@ -47,7 +47,7 @@ export class KeycloakAdminService {
         .catch(error => {
           Logger.log('', '链接keycloak错误');
 
-          this.connectKeycloakServer();
+          // this.connectKeycloakServer();
         });
     } catch (error) {
       Logger.log('', '链接keycloak错222误');

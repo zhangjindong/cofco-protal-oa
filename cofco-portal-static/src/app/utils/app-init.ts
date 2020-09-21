@@ -12,11 +12,13 @@ export function initializer(
         const keycloakEnv: any = await envService
           .getEnvs('keycloak')
           .toPromise();
+          
         const keycloakConfig: KeycloakConfig = {
           url: keycloakEnv.url,
           clientId: keycloakEnv.web.client,
-          realm: keycloakEnv.realm,
+          realm: keycloakEnv.realmName,
         };
+        console.log(keycloakConfig);
         await keycloak.init({
           config: keycloakConfig,
           initOptions: {
