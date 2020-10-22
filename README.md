@@ -59,3 +59,5 @@ docker run --name keycloak -d -p 443:443 -p 9990:9990 -p 8080:8081 \
 -v /root/data/keycloak:/opt/jboss/keycloak \
 --restart=always jboss/keycloak
 
+docker run --name keycloak -d -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:11.0.2
+docker run --name keycloak -d -p 8081:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -v /root/data/keycloak:/opt/jboss/keycloak quay.io/keycloak/keycloak:11.0.2

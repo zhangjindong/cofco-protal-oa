@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.json  --host portal.baoli.com",
+    "start": "ng serve --proxy-config proxy.json  --host portal.baoli.com --port 4200",
     "build": "ng build",
     "build:prod": "ng build --prod --aot --sourceMap=false",
     "test": "ng test",

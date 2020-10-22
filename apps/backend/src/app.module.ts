@@ -9,6 +9,7 @@ import { UserModule } from './user/user.module';
 import { MessageModule } from './message/message.module';
 import { KeycloakRegistrationModule } from './keycloak-registration/keycloak-registration.module';
 import configuration from './config/configuration';
+import { RedisSessionModule } from './redis-session/redis-session.module';
 
 @Module({
   imports: [
@@ -24,6 +25,16 @@ import configuration from './config/configuration';
     UserModule,
     MessageModule,
     KeycloakRegistrationModule,
+    RedisSessionModule.register({
+      session: {
+        secret: 'secret',
+        saveUninitialized: false,
+        resave: false,
+      },
+      redis: {
+        host: 'localhost',
+      },
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],
