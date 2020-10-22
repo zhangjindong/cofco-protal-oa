@@ -151,6 +151,127 @@
           }
         }
       }
+    },
+    "coreenterprisefront": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/coreenterprisefront",
+      "sourceRoot": "projects/coreenterprisefront/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/coreenterprisefront",
+            "index": "projects/coreenterprisefront/src/index.html",
+            "main": "projects/coreenterprisefront/src/main.ts",
+            "polyfills": "projects/coreenterprisefront/src/polyfills.ts",
+            "tsConfig": "projects/coreenterprisefront/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/coreenterprisefront/src/favicon.ico",
+              "projects/coreenterprisefront/src/assets"
+            ],
+            "styles": [
+              "projects/coreenterprisefront/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/coreenterprisefront/src/environments/environment.ts",
+                  "with": "projects/coreenterprisefront/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "coreenterprisefront:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "coreenterprisefront:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "coreenterprisefront:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/coreenterprisefront/src/test.ts",
+            "polyfills": "projects/coreenterprisefront/src/polyfills.ts",
+            "tsConfig": "projects/coreenterprisefront/tsconfig.spec.json",
+            "karmaConfig": "projects/coreenterprisefront/karma.conf.js",
+            "assets": [
+              "projects/coreenterprisefront/src/favicon.ico",
+              "projects/coreenterprisefront/src/assets"
+            ],
+            "styles": [
+              "projects/coreenterprisefront/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/coreenterprisefront/tsconfig.app.json",
+              "projects/coreenterprisefront/tsconfig.spec.json",
+              "projects/coreenterprisefront/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/coreenterprisefront/e2e/protractor.conf.js",
+            "devServerTarget": "coreenterprisefront:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "coreenterprisefront:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "cofco-portal-static",
