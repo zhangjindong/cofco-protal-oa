@@ -13,6 +13,9 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NZ_I18N, zh_CN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 registerLocaleData(zh);
 
@@ -24,8 +27,11 @@ registerLocaleData(zh);
     SharedModule,
     HttpClientModule,
     KeycloakAngularModule,
+    FormsModule,
+    BrowserAnimationsModule,
     NzLayoutModule,
     NzMenuModule,
+    NzIconModule,
   ],
   providers: [
     {
@@ -34,6 +40,7 @@ registerLocaleData(zh);
       multi: true,
       deps: [KeycloakService, EnvService],
     },
+    { provide: NZ_I18N, useValue: zh_CN },
   ],
   bootstrap: [AppComponent],
 })

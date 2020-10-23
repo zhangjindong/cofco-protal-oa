@@ -133,7 +133,9 @@
               "projects/portal/tsconfig.spec.json",
               "projects/portal/e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
@@ -172,9 +174,17 @@
             "aot": true,
             "assets": [
               "projects/coreenterprisefront/src/favicon.ico",
-              "projects/coreenterprisefront/src/assets"
+              "projects/coreenterprisefront/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
-            "styles": ["projects/coreenterprisefront/src/styles.scss"],
+            "styles": [
+              "projects/coreenterprisefront/src/theme.less",
+              "projects/coreenterprisefront/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -236,7 +246,9 @@
               "projects/coreenterprisefront/src/favicon.ico",
               "projects/coreenterprisefront/src/assets"
             ],
-            "styles": ["projects/coreenterprisefront/src/styles.scss"],
+            "styles": [
+              "projects/coreenterprisefront/src/styles.scss"
+            ],
             "scripts": []
           }
         },
@@ -248,7 +260,9 @@
               "projects/coreenterprisefront/tsconfig.spec.json",
               "projects/coreenterprisefront/e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
