@@ -1,3 +1,48 @@
+
+
+# 华软 新微前端开发 Todolist
+- [x] 实现本地K8s，keycloak的本地化存储，和新节点的发布
+- [x] 本地k8部署keycloak redis、node
+- [ ] 实现Redis托管Nestjs的session。参见https://github.com/tj/connect-redis
+- [ ] 实现Nestjs 的微服务，及Redis的微服务化
+- [ ] 验证Nest微服务和keycloak redis 是否正常。
+---
+- [ ] 进一步跟踪Angular11 webpack5 实现微前端的思路。尝试基于Angular11微前端的示例，构建angular微前端。
+- [ ] 思考Angualr微前端的几大要点如何满足
+- - [ ] 是否足够独立
+- - [ ] 是否足够快速，不冗余
+- - [ ] 是否足够安全
+- - [ ] 公共包、工具、公共组件的提取
+- [ ] 实现keycloak端对客户端的自动化注册。
+- [ ] 实现keycloak端对角色的自动化管理。
+- [ ] 实现keycloak端对资源的自动化管理。
+- [ ] 实现keycloak端对资源的自动化管理。
+- [ ] 思考对接keycloak权限的时候，通过岗位进行配置
+
+
+
+# 前端架构蓝图
+
+```
+graph LR
+用户界面-->AngularShell
+用户界面-->Keycloak
+Keycloak-->用户界面
+Keycloak-->NestShell
+AngularShell-->ApplicationA
+AngularShell-->ApplicationB
+AngularShell-->ApplicationC
+ApplicationA-->NestShell+Redis
+ApplicationB-->NestShell+Redis
+ApplicationC-->NestShell+Redis
+NestShell+Redis-->NodeA
+NestShell+Redis-->NodeB
+NestShell+Redis-->NodeC
+NodeA-->ApiServiceA
+NodeB-->ApiServiceB
+NodeC-->ApiServiceC
+```
+
 ## Installation
 
 ```bash
