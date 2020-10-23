@@ -140,10 +140,12 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/cdk@^9.0.0":
-  version "9.2.4"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-9.2.4.tgz#8413958bd275e4c34be3b96f56444671dd30ba93"
-  integrity sha512-iw2+qHMXHYVC6K/fttHeNHIieSKiTEodVutZoOEcBu9rmRTGbLB26V/CRsfIRmA1RBk+uFYWc6UQZnMC3RdnJQ==
+"@angular/cdk@^10.2.4":
+  version "10.2.5"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-10.2.5.tgz#768204ff4db1282297d15f382970f151f87434ec"
+  integrity sha512-SI/YdaxfkttG92A0uGRixyJkfTKHn0GIU+7BCSRq0d31ru3Ugfln+jr+5/xttxWr88CNPTfpGaUt0ZuSqYCzqw==
+  dependencies:
+    tslib "^2.0.0"
   optionalDependencies:
     parse5 "^5.0.0"
 
@@ -268,20 +270,13 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
-"@ant-design/icons-angular@^10.0.1":
+"@ant-design/icons-angular@^10.0.0", "@ant-design/icons-angular@^10.0.1":
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/@ant-design/icons-angular/-/icons-angular-10.0.1.tgz#d1173f629535c1e82a05288fd95b8e05bc272d61"
   integrity sha512-RXVzUR1gYUURIkm6jp1LV8U2/9l02IhUGfYHt1SqP73vijzrbXVmkdJSATFbL4wjnoOc+d6VGKTNu6DeVtzldg==
   dependencies:
     "@ant-design/colors" "^3.1.0"
     tslib "^2.0.0"
-
-"@ant-design/icons-angular@^9.0.0":
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/@ant-design/icons-angular/-/icons-angular-9.0.1.tgz#5ac8bec5bc34d23120820c93f8511b59aa117bc5"
-  integrity sha512-bWdHOmO4LSQ3wpmivwTI7EWiRUMGSVA+fyfiGZ9IrQqoccg9XjGcWqT/VA9A45OV0QTKweo4hp3xaTzRBKsc+g==
-  dependencies:
-    "@ant-design/colors" "^3.1.0"
 
 "@ant-design/icons-svg@^4.0.0":
   version "4.1.0"
@@ -6100,16 +6095,16 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-ng-zorro-antd@^9.3.0:
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/ng-zorro-antd/-/ng-zorro-antd-9.3.0.tgz#f80dbe2715e578c475728773449442f0099f152c"
-  integrity sha512-O7uRCnsFTGHn/74ly8VCUoaMlED3cWLJfvbD0FLzDjBlnz77kcuM5qd+yGMT2hAYXmXYWu2ZRRJWLx5QUGLHkA==
+ng-zorro-antd@^10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/ng-zorro-antd/-/ng-zorro-antd-10.0.2.tgz#e3eeac3cccb75859f3d1937202f7259da2190557"
+  integrity sha512-+QJMNFQ7vsDZcWRlMSgSreS1jAMonP6I+VXBfkGWjAZ0x7xxgFRi8a4q2/pRuDf5PzmNEzL49tP+Nv5Aevq2cw==
   dependencies:
-    "@angular/cdk" "^9.0.0"
-    "@ant-design/icons-angular" "^9.0.0"
+    "@angular/cdk" "^10.2.4"
+    "@ant-design/icons-angular" "^10.0.0"
     date-fns "^2.10.0"
     resize-observer-polyfill "^1.5.1"
-    tslib "^1.10.0"
+    tslib "^2.0.0"
 
 ngx-swiper-wrapper@^9.0.1:
   version "9.0.1"
