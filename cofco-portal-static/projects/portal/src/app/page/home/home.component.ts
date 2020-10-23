@@ -8,7 +8,7 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import { SwiperConfigInterface, SwiperDirective } from 'ngx-swiper-wrapper';
-import { ScrollService } from 'src/app/shared/scroll.service';
+import { ScrollService } from 'projects/portal/src/app/shared/scroll.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
