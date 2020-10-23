@@ -23,7 +23,7 @@
                 "externals": "replace"
               }
             },
-            "outputPath": "../../dist/portal",
+            "outputPath": "../dist/portal",
             "index": "projects/portal/src/index.html",
             "main": "projects/portal/src/main.ts",
             "polyfills": "projects/portal/src/polyfills.ts",
@@ -166,7 +166,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../../dist/coreenterprisefront",
+            "outputPath": "../dist/coreenterprisefront",
             "index": "projects/coreenterprisefront/src/index.html",
             "main": "projects/coreenterprisefront/src/main.ts",
             "polyfills": "projects/coreenterprisefront/src/polyfills.ts",

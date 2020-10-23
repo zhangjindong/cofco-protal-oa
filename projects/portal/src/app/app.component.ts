@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'cofco-portal-static';
+  title = 'portal';
   isCollapsed = false;
 }
