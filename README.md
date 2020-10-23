@@ -42,7 +42,7 @@ NodeA-->ApiServiceA
 NodeB-->ApiServiceB
 NodeC-->ApiServiceC
 ```
-
+<img src="./docs/前端架构图.png">
 ## Installation
 
 ```bash
