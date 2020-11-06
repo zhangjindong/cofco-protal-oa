@@ -15,7 +15,18 @@
       "sourceRoot": "apps/backend/src",
       "compilerOptions": {
         "tsConfigPath": "apps/backend/tsconfig.app.json",
-        "plugins": ["@nestjs/swagger/plugin"]
+        "plugins": [
+          "@nestjs/swagger/plugin"
+        ]
+      }
+    },
+    "coreenterprisefront": {
+      "type": "application",
+      "root": "apps/coreenterprisefront",
+      "entryFile": "main",
+      "sourceRoot": "apps/coreenterprisefront/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/coreenterprisefront/tsconfig.app.json"
       }
     }
   }

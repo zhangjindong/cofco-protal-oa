@@ -3412,38 +3412,38 @@
         "affectsGlobalScope": false
       },
       "../../../node_modules/class-transformer/ClassTransformOptions.d.ts": {
-        "version": "d89af0c250e1424959162beae79f2c2745c729d6ab8028503d322395d96d3a2b",
-        "signature": "d89af0c250e1424959162beae79f2c2745c729d6ab8028503d322395d96d3a2b",
+        "version": "d3717ebff6037a2e7c72674f085393f58a6825e82a49ac8966234641d230c6b8",
+        "signature": "d3717ebff6037a2e7c72674f085393f58a6825e82a49ac8966234641d230c6b8",
         "affectsGlobalScope": false
       },
       "../../../node_modules/class-transformer/ClassTransformer.d.ts": {
-        "version": "96589ead67dc132731ddb531c3c7de2e66156df7154b1136d1abd92bdaa27e79",
-        "signature": "96589ead67dc132731ddb531c3c7de2e66156df7154b1136d1abd92bdaa27e79",
+        "version": "a866bf053c8578a2784e8c9b1bb657924a2e70ba4793cc047e35e03d84d1a5ec",
+        "signature": "a866bf053c8578a2784e8c9b1bb657924a2e70ba4793cc047e35e03d84d1a5ec",
         "affectsGlobalScope": false
       },
       "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts": {
-        "version": "1aed251ab92dfd0e4901b3b9ad5eccdeb4d3603d57af947ae5f1de967f5ffa6e",
-        "signature": "1aed251ab92dfd0e4901b3b9ad5eccdeb4d3603d57af947ae5f1de967f5ffa6e",
+        "version": "1df726755b1ba47971bb0e1dd7ca514008a4b4049ce5c84bf7305d6c7cb90ab6",
+        "signature": "1df726755b1ba47971bb0e1dd7ca514008a4b4049ce5c84bf7305d6c7cb90ab6",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/class-transformer/metadata/TypeMetadata.d.ts": {
-        "version": "fc14f591b59444c787440f6d8d4df6d96a2eafd8dcb8f3d9773d2d52a88db64f",
-        "signature": "fc14f591b59444c787440f6d8d4df6d96a2eafd8dcb8f3d9773d2d52a88db64f",
+      "../../../node_modules/class-transformer/enums/transformation-type.enum.d.ts": {
+        "version": "ba06bf784edafe0db0e2bd1f6ecf3465b81f6b1819871bf190a0e0137b5b7f18",
+        "signature": "ba06bf784edafe0db0e2bd1f6ecf3465b81f6b1819871bf190a0e0137b5b7f18",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/class-transformer/TransformOperationExecutor.d.ts": {
-        "version": "1fa98f06f8163fef61071f77e47ad2b7dd26064a43e219a4468df563e911caf3",
-        "signature": "1fa98f06f8163fef61071f77e47ad2b7dd26064a43e219a4468df563e911caf3",
+      "../../../node_modules/class-transformer/enums/index.d.ts": {
+        "version": "a0500233cb989bcb78f5f1a81f51eabc06b5c39e3042c560a7489f022f1f55a3",
+        "signature": "a0500233cb989bcb78f5f1a81f51eabc06b5c39e3042c560a7489f022f1f55a3",
         "affectsGlobalScope": false
       },
       "../../../node_modules/class-transformer/decorators.d.ts": {
-        "version": "cc8aa0870a0defda3818676ecb8123b2d8b15dc40cdc130834bc81b01a58f2e4",
-        "signature": "cc8aa0870a0defda3818676ecb8123b2d8b15dc40cdc130834bc81b01a58f2e4",
+        "version": "2d6cba5e473d8ffb9a79966dae588177793ec087753f728377fff22c1e5ae32b",
+        "signature": "2d6cba5e473d8ffb9a79966dae588177793ec087753f728377fff22c1e5ae32b",
         "affectsGlobalScope": false
       },
       "../../../node_modules/class-transformer/index.d.ts": {
-        "version": "097d4bf3331df1e138ffdcf92e1117f6841bc8337170d927fd955d5ee8a1674b",
-        "signature": "097d4bf3331df1e138ffdcf92e1117f6841bc8337170d927fd955d5ee8a1674b",
+        "version": "ea4f5e760ac2f6dd1fb06785f38d42b6dde82b29d8a1be10a7540dc598a5e4af",
+        "signature": "ea4f5e760ac2f6dd1fb06785f38d42b6dde82b29d8a1be10a7540dc598a5e4af",
         "affectsGlobalScope": false
       },
       "../../../apps/backend/src/pipe/validation.pipe.ts": {
@@ -5158,22 +5158,18 @@
       "../../../node_modules/class-transformer/ClassTransformer.d.ts": [
         "../../../node_modules/class-transformer/ClassTransformOptions.d.ts"
       ],
-      "../../../node_modules/class-transformer/TransformOperationExecutor.d.ts": [
-        "../../../node_modules/class-transformer/ClassTransformOptions.d.ts",
-        "../../../node_modules/class-transformer/metadata/TypeMetadata.d.ts"
-      ],
       "../../../node_modules/class-transformer/decorators.d.ts": [
         "../../../node_modules/class-transformer/ClassTransformOptions.d.ts",
-        "../../../node_modules/class-transformer/TransformOperationExecutor.d.ts",
+        "../../../node_modules/class-transformer/enums/index.d.ts",
         "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts"
+      ],
+      "../../../node_modules/class-transformer/enums/index.d.ts": [
+        "../../../node_modules/class-transformer/enums/transformation-type.enum.d.ts"
       ],
       "../../../node_modules/class-transformer/index.d.ts": [
         "../../../node_modules/class-transformer/ClassTransformOptions.d.ts",
         "../../../node_modules/class-transformer/ClassTransformer.d.ts",
         "../../../node_modules/class-transformer/decorators.d.ts",
-        "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts"
-      ],
-      "../../../node_modules/class-transformer/metadata/TypeMetadata.d.ts": [
         "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts"
       ],
       "../../../node_modules/class-validator/types/decorator/ValidationOptions.d.ts": [
@@ -7824,22 +7820,18 @@
       "../../../node_modules/class-transformer/ClassTransformer.d.ts": [
         "../../../node_modules/class-transformer/ClassTransformOptions.d.ts"
       ],
-      "../../../node_modules/class-transformer/TransformOperationExecutor.d.ts": [
-        "../../../node_modules/class-transformer/ClassTransformOptions.d.ts",
-        "../../../node_modules/class-transformer/metadata/TypeMetadata.d.ts"
-      ],
       "../../../node_modules/class-transformer/decorators.d.ts": [
         "../../../node_modules/class-transformer/ClassTransformOptions.d.ts",
-        "../../../node_modules/class-transformer/TransformOperationExecutor.d.ts",
+        "../../../node_modules/class-transformer/enums/index.d.ts",
         "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts"
+      ],
+      "../../../node_modules/class-transformer/enums/index.d.ts": [
+        "../../../node_modules/class-transformer/enums/transformation-type.enum.d.ts"
       ],
       "../../../node_modules/class-transformer/index.d.ts": [
         "../../../node_modules/class-transformer/ClassTransformOptions.d.ts",
         "../../../node_modules/class-transformer/ClassTransformer.d.ts",
         "../../../node_modules/class-transformer/decorators.d.ts",
-        "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts"
-      ],
-      "../../../node_modules/class-transformer/metadata/TypeMetadata.d.ts": [
         "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts"
       ],
       "../../../node_modules/class-validator/types/decorator/ValidationOptions.d.ts": [
@@ -9657,11 +9649,11 @@
       "../../../node_modules/chalk/index.d.ts",
       "../../../node_modules/class-transformer/ClassTransformOptions.d.ts",
       "../../../node_modules/class-transformer/ClassTransformer.d.ts",
-      "../../../node_modules/class-transformer/TransformOperationExecutor.d.ts",
       "../../../node_modules/class-transformer/decorators.d.ts",
+      "../../../node_modules/class-transformer/enums/index.d.ts",
+      "../../../node_modules/class-transformer/enums/transformation-type.enum.d.ts",
       "../../../node_modules/class-transformer/index.d.ts",
       "../../../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts",
-      "../../../node_modules/class-transformer/metadata/TypeMetadata.d.ts",
       "../../../node_modules/class-validator/types/container.d.ts",
       "../../../node_modules/class-validator/types/decorator/ValidationOptions.d.ts",
       "../../../node_modules/class-validator/types/decorator/array/ArrayContains.d.ts",

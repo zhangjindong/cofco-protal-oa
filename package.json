@@ -18,9 +18,7 @@
     "test:app:watch": "jest --watch",
     "test:app:cov": "jest --coverage",
     "test:app:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:app:e2e": "jest --config ./apps/cofco-portal/test/jest-e2e.json"
-
-    ,
+    "test:app:e2e": "jest --config ./apps/cofco-portal/test/jest-e2e.json",
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.json  --host portal.baoli.com --port 4200",
     "build": "ng build",
@@ -56,8 +54,6 @@
     "rimraf": "^3.0.2",
     "stacktrace-js": "^2.0.2",
     "swagger-ui-express": "^4.1.4",
-
-    
     "@angular/animations": "~10.2.0",
     "@angular/common": "~10.2.0",
     "@angular/compiler": "~10.2.0",
@@ -94,9 +90,6 @@
     "ts-jest": "25.2.1",
     "ts-loader": "^6.2.1",
     "tsconfig-paths": "^3.9.0",
-
-
-    
     "@angular-builders/custom-webpack": "^10.0.1",
     "@angular-devkit/build-angular": "~0.1001.7",
     "@angular/cli": "~10.1.7",
