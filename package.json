@@ -40,7 +40,7 @@
     "connect-history-api-fallback": "^1.6.0",
     "connect-redis": "^5.0.0",
     "express-session": "^1.17.1",
-    "fastify-static": "^2.7.0",
+    "fastify-static": "^4.2.4",
     "ioredis": "^4.17.3",
     "keycloak-admin": "^1.13.0",
     "keycloak-client-registration": "^0.1.0",
